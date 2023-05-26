@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.navbar a  {
+    color: #ededed;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: #00abf0;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+     z-index: 999;
+}
+nav:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5vh;
+    background-color: #1a1a1a;
+    z-index: -1;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 5vh;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+nav ul li {
+    list-style: none;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+#header {
+    background-image: url('images/abstract-future-technology-vision-design-innovation-concept-background-vector.jpg');
+    color: white;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+#header article {
+    margin-left: 4rem;
+}
+#ExploreText {
+    background-image: url('images/18776394_6018043.jpg');
+    color: white;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+#ExploreText article h3 {
+    font-size: 24px;
+}
+.accordion {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.accordion-content {
+    display: none;
+}
+.accordion-header {
+    cursor: pointer;
+}
+.arrow {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.accordion-content div:first-child {
+    flex-basis: 180px;
+    flex-grow: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.accordion-content div:first-child img {
+    max-width: 480px;
+    max-height: 480px;
+}
+.accordion-content div:last-child {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+section{
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+article {
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 1rem;
+    transform: translate(0, 10rem);
+    opacity: 0;
+    transition: all 1s;
+}
+
+article.inviewport {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+body {
+    margin: 0;
+    font-family: Montserrat, serif;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+#FutureIsNow {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#Subheader {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+#date {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+}
+#TimetableElement {
+    background-image: url('images/vector-future.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+#Timetable {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+
+#TimetableTable {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-collapse: collapse;
+    width: 60%;
+}
+#TimetableTable td, #TimetableTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#TimetableTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: white;
+}
+#TimetableTable td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+#mapHeader
+{
+    display: block;
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+#marker {
+    width: 64px;
+    height: 64px;
+    background-image: url(images/pin.png);
+    background-size: cover;
+    cursor: pointer;
+}
+#contact{
+    background-color: #1a1a1a;
+}
+#PopUp{
+    color: black;
+    text-align: center;
+    font-size: 16px;
+}
+#regHeader
+{
+    display: block;
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+#form {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+#form label {
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+#form div {
+    margin-bottom: 1rem;
+}
+#name, #email {
+    display: block;
+    font-family: inherit;
+    width: 100%;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 1rem;
+    color: lightgray;
+    background-color: #444;
+    border: 1px solid #666;
+}
+::placeholder {
+    color: lightgray;
+}
+#form button {
+    display: inline-block;
+    font-family: inherit;
+    font-weight: 700;
+    color: white;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: 1px solid #888;
+    cursor: pointer;
+}
+#form button#submit {
+    background-color: #037317;
+    margin-left: 1rem;
+}
+#form button#reset {
+    background-color: red;
+}
+#form button:hover {
+    transform: scale(1.1);
+}
+#form div:last-child {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#map {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    position: relative;
+    padding: 4rem;
+}
+
+footer {
+    background-color: #333;
+}
+
+footer ul {
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+    list-style: none;
+}
+#PCUlogo {
+     width: 284px;
+     height: 68px;
+ }
+
+footer li {
+    margin: 1rem;
+}
+footer img {
+    width: 4rem;
+    height: 4rem;
+    transition: all 0.3s;
+}
+footer a:hover img {
+    transform: scale(1.2);
+}
+
+@media (max-width: 900px) {
+    footer ul>li:nth-child(1) {
+        grid-column: 1 / 2;
+    }
+    footer ul>li:nth-child(2) {
+        grid-column: 4 / 5;
+    }
+    footer ul>li:nth-child(3) {
+        grid-column: 5 / 6;
+    }
+    footer ul>li:nth-child(4) {
+        grid-column: 6 / 7;
+    }
+    footer ul>li:nth-child(5) {
+        grid-row: 2 / 3;
+        grid-column: 4 / 5;
+    }
+    footer ul>li:nth-child(6) {
+        grid-row: 2 / 3;
+        grid-column: 5 / 6;
+    }
+    footer ul>li:nth-child(7) {
+        grid-row: 2 / 3;
+        grid-column: 6 / 7;
+    }
+    html {
+        font-size: 14px;
+    }
+    .accordion-content {
+        flex-direction: column;
+    }
+    .accordion-content div:first-child {
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+    .accordion-content div:last-child {
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+    #ExploreText article h3 {
+        font-size: 18px;
+    }
+}
+@media (max-width: 600px) {
+    #FutureIsNow {
+        font-size: 30px;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+
+    #Subheader {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+
+    #date {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    #ExploreText article h3 {
+        font-size: 16px;
+    }
+    footer ul > li:nth-child(1) {
+        grid-column: 1 / 2;
+    }
+
+    footer ul > li:nth-child(2) {
+        grid-column: 4 / 5;
+    }
+
+    footer ul > li:nth-child(3) {
+        grid-column: 5 / 6;
+    }
+
+    footer ul > li:nth-child(4) {
+        grid-row: 2 / 3;
+        grid-column: 4 / 5;
+    }
+
+    footer ul > li:nth-child(5) {
+        grid-row: 2 / 3;
+        grid-column: 5 / 6;
+    }
+
+    footer ul > li:nth-child(6) {
+        grid-row: 3 / 4;
+        grid-column: 4 / 5;
+    }
+
+    footer ul > li:nth-child(7) {
+        grid-row: 3 / 4;
+        grid-column: 5 / 6;
+    }
+}

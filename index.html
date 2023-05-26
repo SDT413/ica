@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Future is Now</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet'/>
+    <script src="app.js" defer></script>
+</head>
+<header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#ExploreText">Goal</a></li>
+            <li><a href="#Timetable">Timetable</a></li>
+            <li><a href="#mapHeader">Location</a></li>
+            <li><a href="#regHeader">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+
+<body>
+<section id = "header">
+    <article class="inviewport">
+        <h1 id = "FutureIsNow">The Future is Now</h1>
+        <h2 id ="Subheader">School of Media and IT Mini Conference in AI</h2>
+        <h3 id = "date">26.5.2023 9:00am – 18:00pm</h3>
+    </article>
+</section>
+<section id = "ExploreText">
+    <article class="inviewport">
+    <h3>
+        Explore the diverse applications of AI, the challenges and opportunities that come with its development,
+        and how it can be leveraged to make a positive impact on society.
+        We look forward to engaging in meaningful conversations that will further the progress of AI and its potential to shape the future.
+    </h3>
+    </article>
+</section>
+<div id = "TimetableElement">
+    <table id = "TimetableTable">
+        <div class="accordion">
+            <caption id = "Timetable">Conference Timetable</caption>
+            <tr>
+                <th>Time</th>
+                <th>Event</th>
+            </tr>
+            <tr>
+                <td>8:00am - 9:00am</td>
+                <td>Doors open and registration</td>
+            </tr>
+               <tr>
+                    <td>9:00am - 9:30am</td>
+                    <td>Opening remarks</td>
+                </tr>
+               <tr>
+                    <td>9:30am - 10:30am</td>
+                    <td class="accordion-header">Mark Anderson: Introduction to AI  <span class="arrow">&#9660;</span></td>
+                </tr>
+            <tr class="accordion-content">
+                <td colspan="2">
+                    <div><img src="images/846-08140076en_Masterfile.jpg"></div>
+                    <div class="person-info">
+                        <h3>Mark Anderson</h3>
+                        <h4>Introduction to AI</h4>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>10:30am - 11:30am</td>
+                <td class="accordion-header">Sarah Johnson: AI Applications in Healthcare <span class="arrow">&#9660;</span></td>
+            </tr>
+            <tr class="accordion-content">
+                <td colspan="2">
+                    <div><img src="images/500_F_382308382_eNyVW7QU4uRfwbg20hHk1UpoWkxj2DuW.jpg"></div>
+                    <div class="person-info">
+                        <h3>Sarah Johnson</h3>
+                        <h4>AI Applications in Healthcare</h4>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>11:30am - 12:30pm</td>
+                <td>Workshop 1: Developing AI Algorithms</td>
+            </tr>
+            <tr>
+                <td>12:30pm - 1:30pm</td>
+                <td>Lunch</td>
+            </tr>
+            <tr>
+                <td>1:30pm - 2:30pm</td>
+                <td class="accordion-header">Jennifer Williams: Machine Learning <span class="arrow">&#9660;</span></td>
+            </tr>
+            <tr class="accordion-content">
+                <td colspan="2">
+                    <div><img src="images/500_F_382308382_eNyVW7QU4uRfwbg20hHk1UpoWkxj2DuW.jpg"></div>
+                    <div class="person-info">
+                        <h3>Jennifer Williams</h3>
+                        <h4>Machine Learning</h4>
+                    </div>
+                </td>
+            </tr>
+                <tr>
+                    <td>2:30pm - 3:30pm</td>
+                    <td class="accordion-header">Andrew Smith: Natural Language Processing <span class="arrow">&#9660;</span></td>
+                </tr>
+        <tr class="accordion-content">
+                <td colspan="2">
+                    <div><img src="images/846-08140076en_Masterfile.jpg"></div>
+                    <div class="person-info">
+                        <h3>Andrew Smith</h3>
+                        <h4>Natural Language Processing</h4>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>3:30pm - 4:30pm</td>
+                <td>Workshop 2: Implementing AI in Business</td>
+            </tr>
+            <tr>
+                <td>4:30pm - 5:30pm</td>
+                <td class="accordion-header">Rebecca Jones: AI and the Future <span class="arrow">&#9660;</span></td>
+            </tr>
+            <tr class="accordion-content">
+                <td colspan="2">
+                    <div><img src="images/500_F_382308382_eNyVW7QU4uRfwbg20hHk1UpoWkxj2DuW.jpg"></div>
+                    <div class="person-info">
+                        <h3>Rebecca Jones</h3>
+                        <h4>AI and the Future</h4>
+                    </div>
+                </td>
+            <tr>
+                <td>5:30pm - 6:00pm</td>
+                <td>Closing remarks and networking</td>
+            </tr>
+        </div>
+    </table>
+
+</div>
+<h2 id="mapHeader">Conference Location:</h2>
+<section id="map"></section>
+
+<h2 id="regHeader">Contact us:</h2>
+<div id = "contact">
+    <form id = "form">
+        <div>
+            <label for = "name">Name </label>
+            <input type="text" name = "name" id = "name" required placeholder="Your name:">
+        </div>
+        <div>
+            <label for="email">Email </label>
+            <input id = "email" type="email" name = "email" required  placeholder="Your email(@email.com):">
+        </div>
+        <div>
+            <button type="reset" id="reset">Reset</button>
+            <button type="submit" id="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+</body>
+<footer>
+    <ul>
+        <li><a href = "https://www.praguecityuniversity.cz/"><img id = "PCUlogo" src = "images/pcu-white.png" alt = "PCU logo"></a></li>
+        <li><a href = "https://www.facebook.com/PragueCityUniversity"><img src="images/icon-facebook.svg"></a></li>
+        <li><a href = "https://www.instagram.com/praguecityuniversity/"><img src="images/icon-instagram.svg"></a></li>
+        <li><a href = "https://twitter.com/PragueCityUni"><img src="images/icon-twitter.svg"></a></li>
+        <li><a href = "https://www.linkedin.com/school/prague-city-university/"><img src="images/icon-linkedin.svg"></a></li>
+        <li><a href = "https://www.youtube.com/channel/UCtJM41jXN0JSVFM2pxuAzGw"><img src="images/icon-youtube.svg"></a></li>
+        <li><a href = "https://www.flickr.com/photos/praguecityuniversity/albums"><img src="images/icon-flickr.svg"></a></li>
+    </ul>
+</footer>
+</html>
